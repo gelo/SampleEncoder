@@ -38,9 +38,11 @@ export class EncodeTextComponent implements OnDestroy {
           (error) => {
             console.error('Error in stream:', error);
             this.encodingInProgress = false;
+            this.cdr.detectChanges();
           },
           () => {
             this.encodingInProgress = false;
+            this.cdr.detectChanges();
           }
         );
       },
