@@ -1,0 +1,17 @@
+
+<div class="form-container">
+    <label for="textToEncode" class="label-text">Text to Encode:</label>
+    <textarea id="textToEncode" class="text-input" [(ngModel)]="textToEncode"></textarea>
+</div>
+
+<button class="convert-btn" (click)="encodeText()" [disabled]="encodingInProgress">Convert</button>
+<button class="cancel-btn" (click)="cancelEncoding()" [disabled]="!encodingInProgress">Cancel</button>
+
+<div *ngIf="encodedText" class="result-container">
+    <p class="result-label">Encoded Text:</p>
+    <p class="result-text">{{ encodedText }}</p>
+</div>
+
+<div *ngIf="encodingInProgress" class="progress-container">
+    <p class="progress-text">Encoding in progress...</p>
+</div>
