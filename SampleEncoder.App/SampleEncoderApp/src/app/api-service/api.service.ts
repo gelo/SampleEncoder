@@ -1,7 +1,7 @@
-// src/app/api.service.ts
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 interface EncodeResponse {
   Base64Result: string;
@@ -18,7 +18,9 @@ export class ApiService {
   encodeText(text: string): Observable<EncodeResponse> {
     const url = `${this.apiUrl}`;
     const body = { Text: text }; 
-    return this.http.post<EncodeResponse>(url, body);
+    return this.http.post<EncodeResponse>(url, body).pipe(
+      catchError(this.handleError)
+    );
   }
 
   getStream(): Observable<any> {
@@ -44,6 +46,21 @@ export class ApiService {
 
   cancelEncoding(): Observable<any> {
     const url = `${this.apiUrl}/cancel`;
-    return this.http.post(url, {});
+    return this.http.post(url, {}).pipe(
+      catchError(this.handleError)
+    );
+  }
+
+  private handleError(error: HttpErrorResponse): Observable<any> {
+    let errorMessage = 'An error occurred.';
+    if (error.error instanceof ErrorEvent) {
+      // Client-side error
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      // Server-side error
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    console.error(errorMessage);
+    return throwError(errorMessage);
   }
 }
