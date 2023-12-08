@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aedhe\\OneDrive\\Documents\\SampleEncoder\\SampleEncoder.Api\\SampleEncoder.Api.csproj": {}
+    "C:\\aedherana\\Encoder\\Encoder\\Encoder.Api\\SampleEncoder.Api\\SampleEncoder.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aedhe\\OneDrive\\Documents\\SampleEncoder\\SampleEncoder.Api\\SampleEncoder.Api.csproj": {
+    "C:\\aedherana\\Encoder\\Encoder\\Encoder.Api\\SampleEncoder.Api\\SampleEncoder.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aedhe\\OneDrive\\Documents\\SampleEncoder\\SampleEncoder.Api\\SampleEncoder.Api.csproj",
+        "projectUniqueName": "C:\\aedherana\\Encoder\\Encoder\\Encoder.Api\\SampleEncoder.Api\\SampleEncoder.Api.csproj",
         "projectName": "SampleEncoder.Api",
-        "projectPath": "C:\\Users\\aedhe\\OneDrive\\Documents\\SampleEncoder\\SampleEncoder.Api\\SampleEncoder.Api.csproj",
-        "packagesPath": "C:\\Users\\aedhe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aedhe\\OneDrive\\Documents\\SampleEncoder\\SampleEncoder.Api\\obj\\",
+        "projectPath": "C:\\aedherana\\Encoder\\Encoder\\Encoder.Api\\SampleEncoder.Api\\SampleEncoder.Api.csproj",
+        "packagesPath": "C:\\Users\\933696\\.nuget\\packages\\",
+        "outputPath": "C:\\aedherana\\Encoder\\Encoder\\Encoder.Api\\SampleEncoder.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aedhe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\933696\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -50,6 +49,10 @@
               "target": "Package",
               "version": "[7.0.13, )"
             },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.70, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
@@ -57,6 +60,14 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.15, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.6.2, )"
             }
           },
           "imports": [
@@ -78,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
